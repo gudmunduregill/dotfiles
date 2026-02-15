@@ -12,7 +12,11 @@ config.font = wezterm.font('Inconsolata Nerd Font', { weight = 'Medium' })
 config.font_size = 12.0
 
 -- Window appearance
-config.window_background_opacity = 0.95
+if wezterm.hostname() == 'Hemingway' then
+  config.window_background_opacity = 1.0
+else
+  config.window_background_opacity = 0.95
+end
 config.window_padding = {
   left = 12,
   right = 12,
