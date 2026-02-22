@@ -114,6 +114,11 @@ case "$ENV" in
         # Bash extensions
         ensure_sourced "$DOTFILES_DIR/bash/pane-tag.bash" "$HOME/.bashrc"
         ensure_sourced "$DOTFILES_DIR/bash/claude-pane.bash" "$HOME/.bashrc"
+
+        # Claude Code hooks
+        mkdir -p "$HOME/.claude/hooks"
+        make_link "$DOTFILES_DIR/claude/hooks/prompt-to-pane.sh" "$HOME/.claude/hooks/prompt-to-pane.sh"
+        make_link "$DOTFILES_DIR/claude/hooks/stop-clear-pane.sh" "$HOME/.claude/hooks/stop-clear-pane.sh"
         ;;
 
     linux)
@@ -126,6 +131,11 @@ case "$ENV" in
         # Bash extensions
         ensure_sourced "$DOTFILES_DIR/bash/pane-tag.bash" "$HOME/.bashrc"
         ensure_sourced "$DOTFILES_DIR/bash/claude-pane.bash" "$HOME/.bashrc"
+
+        # Claude Code hooks
+        mkdir -p "$HOME/.claude/hooks"
+        make_link "$DOTFILES_DIR/claude/hooks/prompt-to-pane.sh" "$HOME/.claude/hooks/prompt-to-pane.sh"
+        make_link "$DOTFILES_DIR/claude/hooks/stop-clear-pane.sh" "$HOME/.claude/hooks/stop-clear-pane.sh"
         ;;
 
     windows)
